@@ -20,6 +20,7 @@ while True:
   left = str('L')
   right = str('R')
   click = str('C')
+  crash = str('CS')
 
   if up in result:
     pyautogui.moveRel(0,-50, duration = 0.1)

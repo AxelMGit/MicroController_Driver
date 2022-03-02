@@ -7,9 +7,6 @@ I2C_LCD1602.lcd_init(39)
 def on_forever():
     global lcd_text
 
-    angle = pins.analog_read_pin(AnalogPin.P1)
-    pins.servo_write_pin(AnalogPin.P13, angle)
-
     if pins.analog_read_pin(AnalogPin.P1) >= 1020:
         #UP
         serial.write_line("U")
@@ -25,7 +22,7 @@ def on_forever():
         serial.write_line("R")
     if tinkercademy.crash_sensor():
         #DETECTION CRASH
-        serial.write_line("crash")
+        serial.write_line("CS")
 
     if input.button_is_pressed(Button.A):
         #BUZZER
