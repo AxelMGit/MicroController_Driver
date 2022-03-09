@@ -31,6 +31,5 @@ while True:
   if right in result:
     pyautogui.moveRel(50,0, duration = 0.1)
   if click in result:
-      pyautogui.click(pyautogui.position())
-
-
+      pyautogui.press('space')
+      #pyautogui.click(pyautogui.position())
